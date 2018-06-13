@@ -1,0 +1,311 @@
+$color_main:#025F9D;
+
+$fron-main:'Conv_DejaVuSans';
+input:active, button:active{
+   box-shadow: none !important;
+   outline: none !important; 
+}
+
+@font-face {
+	font-family: 'Conv_DejaVuSans';
+	src: url('fonts/DejaVuSans.eot');
+	src: local('☺'), url('fonts/DejaVuSans.woff') format('woff'), url('fonts/DejaVuSans.ttf') format('truetype'), url('fonts/DejaVuSans.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.platform_mine_page{
+
+	.container{
+		max-width: 1040px;
+	}
+	
+     nav ul li a{
+     		color: $color_main !important;
+     		font-size: 12px;
+     		font-weight: bold;
+     }
+     nav {
+         margin:20px 0;
+     }
+     nav a{
+     font-weight: bold; 	
+    font-size: 12px;
+    color: $color_main !important;
+	}
+
+	.content{
+		 color: $color_main;
+
+		 .row{
+		 	padding: 70px 0px;
+
+		 	img{
+		 		max-width: 100%;
+		 	}
+
+		 	.question{
+		 		font-size: 15px;
+    font-weight: bold;
+    width: 51%;
+    padding-left: 20px;
+    margin-bottom: 38px;
+    padding-bottom: 10px;
+		 		border-bottom:2px solid $color_main;
+		 	}
+		 }
+	}
+
+	footer{
+		background: #30668A;
+		color: #fff; 
+		font-size: 15px;
+		a{
+
+		color:#fff;
+		font-size: 15px;
+		}
+		.container{
+			max-width: 981px;
+		}
+	}
+	.container.nav_cont{
+		max-width: 981px;
+	}
+
+   .subject_3{
+   	border: 2px solid $color_main;
+   	height: 72px;
+   	cursor: pointer;
+   	     transition:0.3s;
+   	     font-weight: bold;
+   	&:hover{
+		 	background: #009CA7;
+		 	color: #fff;
+		 	}
+
+   }
+
+	.subject-50{
+		 div{
+		 	border: 2px solid $color_main;
+            padding: 10px;
+            transition:0.3s;
+            cursor:pointer;
+            font-weight: bold;
+            text-align: center;
+		 	&:nth-child(2){
+                margin: 0px 10px;
+                padding: 10px;
+		 	}
+		 	&:hover{
+		 	background: #009CA7;
+		 	color: #fff;
+		 	}
+		 }
+	}
+   header{
+   	width: 100%;
+   	&.fixed{
+     position: fixed;
+     margin-top: 0px;
+     z-index: 2;
+         background: #9af2ddad;
+      .navbar {
+      	margin-top: 0px !important;
+      	margin-bottom: 0px !important;
+      }
+   	}
+   }
+}
+
+
+
+.log_in{
+  margin-top: 60px;
+
+   button{
+   	cursor: pointer;
+   }
+
+	max-width: 290px !important;
+	margin-bottom: 170px;
+
+	.tab-content{
+		border: 1px solid #30668A !important;
+		height: 336px;
+		margin-top: 17px;
+
+
+		 .registration_bulets{
+		 	 span{
+		 	 	display: inline-block;
+		 	 	width: 8px;
+		 	 	height: 8px;
+		 	 	border: 2px solid $color_main;
+		 	 	border-radius: 10px;
+		 	 	cursor: pointer;
+
+		 	 	 &:first-child{
+		 	 	 	margin-right: 10px;
+		 	 	 }
+		 	 	 
+		 	 }
+		 	 span.active{
+		 	 	 	background:$color_main;
+		 	 	 }
+		 }
+	}
+	input:focus, select:focus{
+     box-shadow: none;
+     outline: none;
+	}
+	input, select{
+		width: 227px;
+         color:#878787 !important;
+         font-size: 14px;
+		       margin: 5px 0px;
+		border: none;
+		border-bottom: 2px solid $color_main;
+		padding:  6px 18px;
+
+		 &::placeholder{
+		     color:#878787;
+		     font-size: 10px;
+		 }
+	}
+	select{
+		font-size: 10px;
+		padding:  6px 14px !important;
+     option{
+     	 font-size: 10px;
+     	 &:first-child{
+     	 	 display: none;
+     	 }
+     }
+	}
+	.ntn_login{
+		border: none;
+		background: unset;
+		color: $color_main;
+		font-size: 12px;
+		margin-top: 80px;
+		font-weight: bold;
+
+	}
+	.log_in_kings{
+		border: 2px solid $color_main;
+		background: unset;
+		margin-top: 30px;
+		color: $color_main;
+		font-size: 12px;
+		font-weight: bold;
+		padding: 6px;
+		font-weight: bold;
+	}
+	.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus{
+		background: none;
+		border: none;
+	}
+	.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
+        font-size: 12px;
+		color: $color_main;
+		border: none;
+		border-bottom: 2px solid $color_main;
+
+	}
+	.nav-tabs .nav-link{
+		font-size: 12px;
+		font-weight: bold;
+		padding: 0.4rem 0.5rem;
+           &.right{
+           	margin-left: 10px;
+           }
+		
+	}
+	a{
+		color: $color_main;
+	}
+
+	#menu1{
+       
+      .ntn_next{
+      	    border: none;
+    background: unset;
+    color: #025F9D;
+    font-size: 12px;
+    margin-top: 67px;
+    font-weight: bold;
+
+      }
+       .secund_step{
+       	   input {
+    width: 227px;
+    border: none;
+    border-bottom: 2px solid #025F9D;
+    padding: 4px 18px 6px;
+    margin: 1px 0px !important;
+
+    select{
+     	margin: 1px 0px !important;
+     }
+}
+.ntn_next{
+	    background: #FFCD03;
+    padding: 4px;
+    margin-top: 60px;
+
+}
+       }
+       .errors1s{
+       	transform: translateY(30px);
+       	color: 	red;
+       	font-size: 13px;
+       }
+	}
+
+
+}
+.content p a{
+		color: $color_main !important;
+           }
+.content p a:hover{
+	 text-decoration: none;
+}
+
+// 
+  .mobili_login{
+           	display: none;
+           }
+
+@media only screen and (max-width: 600px) {
+
+           .platform_mine_page .subject-50 div{
+
+           	font-size: 10px;
+           }
+           .platform_mine_page .content .row .question{
+           	width: 100%;
+           	text-align: center;
+           	padding-left: 0px;
+           }
+           .content p{
+           	text-align: center;
+           }
+           #myNavbar{
+           	text-align: center;
+           }
+           .form-inline.my-2.my-lg-0{
+           	text-align: center;
+           }
+           .platform_mine_page nav a{
+           	  margin-right: 0px;
+           }
+            .mobili_login{
+           	display: block;
+           }
+         
+           .not_mobile{
+           	 display: none;
+           }
+}

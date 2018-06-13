@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>books</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+   <link rel="stylesheet" type="text/css" href="css/fontawesome-all.css">
+	<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <div class="platform_mine_page">
+<!--     <header >
+    	<div class="container nav_cont">
+    		 <nav id="nav" class="navbar navbar-expand-lg " >
+  <a class="navbar-brand d-flex" href="javascript:void(0)"><img src="images/logo.png"></a>
+  <a class="mobili_login" href=""> ავტორიზავია </a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+    <span class="fas fa-bars"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navb" >
+    <ul id="myNavbar" class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#section1">რა არის ?</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section2">ბავშვის სარგებელი</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section3">მშობლის სარგებელი</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section4">რა ღირს ?</a>
+      </li>
+     
+    </ul>
+    <form  class="form-inline not_mobile my-2 my-lg-0">
+      <a  href="#s5">ავტორიზავია</a>
+    </form>
+  </div>
+</nav>
+
+    	</div>
+    </header> -->
+
+    <div class="container content">
+   
+
+       <div id="s5" class="log_in container">
+
+  <!-- Nav tabs -->
+  <ul class="nav border-0 nav-tabs d-flex align-items-center justify-content-center" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#home">ავტორიზაცია</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link right" data-toggle="tab" href="#menu1">რეგისტრაცია</a>
+    </li>
+  
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active">  <form  class="d-flex align-items-center mt-3 flex-column">
+         <input class="mb-3" type="" name="" placeholder="სახელი">
+         <input  type="" name="" placeholder="პაროლი">
+         <button class="ntn_login">შესვლა</button>
+         <button class="log_in_kings">KINGS ის ექაუნთით შესვლა</button>
+    </form>
+    </div>
+    <div id="menu1" class="container tab-pane fade"><br>
+       <div class="registration_bulets text-center"><span id="bulet1" class="active"></span> <span id="bulet2"></span>
+       </div>
+         <form  class="first_step  d-flex align-items-center mt-2 flex-column">
+         <input class="registration_number" type="" name="" placeholder="ნომერი" required="">
+         <input class="registration_password" type="password" name="" placeholder="პაროლი" required="">
+         <div class="errors1s"></div>
+         <button class="ntn_next ">შემდეგი</button>
+         
+        </form>
+
+         <form  class="secund_step d-none align-items-center mt-1 flex-column">
+         <input type="" name="" placeholder="სახელი">
+         <input type="" name="" placeholder="გვარი">
+         <!-- <input type="" name="" placeholder="ქალაქი"> -->
+         <select>
+            <option>ქალაქი</option>
+            <option>თბილისი</option>
+            <option>ქუთაისი</option>
+         </select>
+         <input type="" name="" placeholder="სკოლა">
+         <select>
+            <option>კლასი</option>
+            <option>1</option>
+            <option>2</option>
+         </select>
+         <button class="ntn_next ">რეგისტრაცია</button>
+         
+        </form>
+
+    </div>
+ 
+  </div>
+  <script type="text/javascript">
+       var registration_number =false;
+       var registration_number =false;
+       $('.registration_number').change(function(){
+         if($('.registration_number').val().length<= 9){
+             $('.errors1s').text('შეიყვანე მინიმუმ 9 ციფრი')
+               registration_number =false;
+         }
+         else if(!$.isNumeric($('.registration_number').val())){
+           $('.errors1s').text('შეიყვანე მხოლოდ ციფრები')
+           registration_number =false;
+         }
+         else{
+           $('.errors1s').text('');
+           registration_number=true;
+         }
+       })
+    
+
+    $('.registration_password').change(function(){
+
+   if($(this). val().length< 6){
+   
+   }
+  else{
+  
+    registration_pass=true;
+  }
+    })
+      $('.ntn_next').click(function(e){
+          e.preventDefault();
+         nextstep()
+        
+      })
+  
+
+
+function nextstep(){
+
+   if(!(registration_number && registration_number)){
+               
+          }
+          else{
+             $('#bulet1').removeClass('active')
+  $('#bulet2').addClass('active')
+  $('.first_step').removeClass('d-flex')
+  $('.first_step').addClass('d-none')
+  $('.secund_step').removeClass('d-none')
+  $('.secund_step').addClass('d-flex')
+          }
+
+}
+
+$('#bulet1').click(function(){
+   prewstep()
+})
+$('#bulet2').click(function(){
+   nextstep()
+  
+})
+function prewstep(){
+                 $('#bulet2').removeClass('active')
+  $('#bulet1').addClass('active')
+  $('.first_step').addClass('d-flex')
+  $('.first_step').removeClass('d-none')
+  $('.secund_step').addClass('d-none')
+  $('.secund_step').removeClass('d-flex')
+  }
+
+
+  // $(window).scroll(function(){
+  //      console.log($(this).scrollTop())
+  //      if($(this).scrollTop() > 20){
+  //           $('header').addClass('fixed')
+  //      }
+  //      else{
+  //        $('header').removeClass('fixed')
+  //      }
+  // })
+
+  </script>
+</div>
+    </div>
+   <footer>
+       <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex flex-column text-sm-left text-center">
+             <a href="" class="mb-1 mt-2">ხშირად დასმული კითხვები</a>
+             <a class="mb-2" href="">კონტაკტი</a>
+          </div>
+          <div class="col-md-6 text-center text-sm-right">
+             <div class="mt-2 "><a href=""> <i class="fab fa-facebook-square"></i></a> <a href=""> <i class="ml-1 mr-0 mr-sm-4 fab fa-youtube-square"></i> </a> </div>
+             <div>Ⓒ კინგსი 2018. ყველა უფლება დაცულია</div>
+          </div>
+        </div>
+       </div>
+   </footer>
+  </div>
+
+  <script type="text/javascript">
+       $("#nav ul li a[href^='#']").on('click', function(e) {
+
+       // prevent default anchor click behavior
+       e.preventDefault();
+
+       // animate
+       $('html, body').animate({
+           scrollTop: $(this.hash).offset().top
+         }, 300, function(){
+   
+           // when done, add hash to url
+           // (default click behaviour)
+           window.location.hash = (this.hash-170);
+         });
+
+    });
+  </script>
+</body>
+</html>
