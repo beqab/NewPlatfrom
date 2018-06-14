@@ -80,7 +80,7 @@ input:active, button:active {
       margin-bottom: 0px !important; }
 
 .log_in {
-  margin-top: 60px;
+  padding-top: 60px;
   max-width: 290px !important;
   margin-bottom: 170px; }
   .log_in button {
